@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  display: block;
+  line-height: 1.5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-weight: 900;
+  font-size: 28px;
+  margin-top: 30px;
+}
+
+span {
+  padding: 10px;
+  display: inline-block;
+  background: linear-gradient(to right, #1a405e, #00a5b5); /* Добавляем градиентный фон для текста */
+  -webkit-background-clip: text; /* Для поддержки вебкит-браузеров */
+  color: transparent; /* Делаем текст прозрачным */
+  transition: 1s;
+}
+
+.frame {
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.animation {
+  text-align: left;
+  color: rgb(39,35,65);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 50px;
+  letter-spacing: -2px;
+  font-weight: bolder;
+}
+
+.btn {
+  position: relative;
+  display: inline-block;
+  padding: 2px 2px;
+  background-color: white;
+  overflow: hidden;
+  border: 1px solid transparent;
+  background-clip: content-box;
+  transition: 1s;
+}
+.btn:hover {
+  background: linear-gradient(to right, #1a405e, #1a405e 50%, #00a5b5 50%, #00a5b5);
+  border: 1px solid transparent;
+  background-clip: content-box;
+  z-index: 1;
+  transition: 1s;
+}
+
+.btn:hover span {
+  color: white;
+  transition: 1s;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  z-index: -1;
+  background: linear-gradient(to right,  #1a405e, #00a5b5);
+  border: 1px solid transparent;
+  transform: skew(-2deg);
+  transition: 1s;
+}
+
+.btn span {
+  padding: 10px;
+  display: inline-block;
+  background: linear-gradient(to right, #1a405e, #00a5b5); /* Добавляем градиентный фон для текста */
+  -webkit-background-clip: text; /* Для поддержки вебкит-браузеров */
+  color: transparent; /* Делаем текст прозрачным */
+  transition: 1s;
+}
+
+//rgb(3, 31, 122), rgb(64, 122, 245)
+
+@media screen and (max-width: 1175px) {
+  .container {
+    justify-content: left;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+
+  .container {
+    margin: 0px 80px;
+  }
+
+  p {
+    font-size: 36px;
+  }
+
+  .btn {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+
+  span {
+    margin: 0;
+    padding: 0;
+  }
+}
+

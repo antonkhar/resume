@@ -1,0 +1,146 @@
+* {
+    font-family: 'Monseratt', sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    color: #272341;
+    margin-top: 45;
+    margin-bottom: 45px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: transparent;    
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(to right, #1a405e, #00a5b5);
+    padding: 8px 16px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease; /* Добавляем плавный переход для анимации */
+}
+
+a:hover {
+    transform: translateX(3px); /* Сдвигаем текст вправо на 5 пикселей */
+    transition: transform 0.3s ease; /* Добавляем плавный переход для анимации */
+}
+
+.card {
+    padding-bottom: 80px;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 380px;
+    line-height: 1.5;
+}
+
+.photo {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: inline-block; /* Чтобы контейнер занимал только ширину изображения */
+    overflow: hidden; /* Скрыть часть изображения, которое выходит за пределы контейнера */
+    transition: transform 0.2s ease; /* Плавный переход для анимации */
+}
+  
+.photo:hover {
+    transform: scale(1.05) rotate(-3deg); /* Немного увеличиваем и наклоняем изображение при наведении */
+}
+
+.title {
+
+    font-size: 25px;
+    font-weight: bold;
+    color: #272341;
+    margin-bottom: 18px;
+}
+
+.description {
+    font-size: 16px;
+    color: #272341;
+    margin-bottom: 16px;
+}
+
+.panel {
+    align-items: center;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 2px 2px;
+    background-color: white;
+    overflow: hidden;
+    border: 1px solid transparent;
+    background-clip: content-box;
+    transition: 1s;
+    width: 105px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #1a405e, #1a405e 50%, #00a5b5 50%, #00a5b5);
+    border: 1px solid transparent;
+    background-clip: content-box;
+    z-index: 1;
+    transition: 1s;
+}
+  
+.btn:hover span {
+    color: white;
+    transition: 1s;
+}
+  
+.btn::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    z-index: -1;
+    background: linear-gradient(to right,  #1a405e, #00a5b5);
+    border: 1px solid transparent;
+    transform: skew(-2deg);
+    transition: 1s;
+}
+  
+.btn span {
+    padding: 10px;
+    display: inline-block;
+    background: linear-gradient(to right, #1a405e, #00a5b5); /* Добавляем градиентный фон для текста */
+    -webkit-background-clip: text; /* Для поддержки вебкит-браузеров */
+    color: transparent; /* Делаем текст прозрачным */
+    transition: 1s;
+}
+
+@media screen and (max-width: 730px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .photo {
+        padding: 8px 0;
+    }
+
+    .text {
+        width: auto;
+    }
+}
